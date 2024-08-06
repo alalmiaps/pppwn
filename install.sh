@@ -21,7 +21,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-wget https://github.com/MODDEDWARFARE/PPPwn_WRT/raw/main/kill.sh
+wget https://github.com/alalmiaps/pppwn/raw/main/kill.sh
 if [ $? -ne 0 ]; then
     echo "Failed to download kill.sh"
     exit 1
@@ -32,7 +32,7 @@ machine_arch=$(uname -m)
 
 # Choose script based on the architecture
 if echo "$machine_arch" | grep -q "arch64"; then
-    wget https://github.com/MODDEDWARFARE/PPPwn_WRT/raw/main/pppwn_arch64
+    wget https://github.com/alalmiaps/pppwn/raw/main/pppwn_arch64
     if [ $? -ne 0 ]; then
         echo "Failed to download pppwn_arch64"
         exit 1
@@ -95,7 +95,7 @@ if [ "$firmware" = "11.00" ] || [ "$firmware" = "10.00" ] || [ "$firmware" = "9.
         echo "Failed to download stage1_${firmware//.}.bin"
         exit 1
     fi
-    wget https://github.com/MODDEDWARFARE/PPPwn_WRT/raw/main/stage2_${firmware//.}.bin
+    wget https://github.com/alalmiaps/pppwn/raw/main/stage2_${firmware//.}.bin
     if [ $? -ne 0 ]; then
         echo "Failed to download stage2_${firmware//.}.bin"
         exit 1
